@@ -1,5 +1,9 @@
 name: Deploy Three.js Showcase
 
+permissions:
+  contents: write 
+  pages: write     
+
 on:
   push:
     branches:
