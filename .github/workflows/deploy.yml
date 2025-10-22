@@ -1,0 +1,35 @@
+name: Deploy Three.js Showcase
+
+on:
+  push:
+    branches:
+      - main  # change if you use a different branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build Haunted House project
+        working-directory: 11-haunted-house
+        run: bun run build
+
+      - name: Copy built project to public folder
+        run: |
+          mkdir -p public/projects/11-haunted-house
+          cp -r 11-haunted-house/dist/* public/projects/11-haunted-house/
+
+      - name: Upload to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

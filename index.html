@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Showcase</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+      header {
+        text-align: center;
+        margin: 3rem 1rem 2rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+      }
+      p {
+        font-size: 1.1rem;
+        opacity: 0.85;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        width: 90%;
+        max-width: 1000px;
+        padding-bottom: 3rem;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.25s ease-in-out;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .card a {
+        color: #00d9ff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      footer {
+        margin-top: auto;
+        padding: 1rem;
+        font-size: 0.9rem;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Three.js Journey Showcase</h1>
+      <p>Explore my interactive 3D experiments and mini projects built with Three.js</p>
+    </header>
+
+    <section class="projects">
+      <div class="card">
+        <h2>🏚️ Haunted House</h2>
+        <p>Spooky lighting, dynamic shadows, and ghostly animations.</p>
+        <a href="./public/projects/11-haunted-house/index.html" target="_blank">View Project</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Vineet — Built with ❤️ and Three.js</p>
+    </footer>
+  </body>
+</html>
