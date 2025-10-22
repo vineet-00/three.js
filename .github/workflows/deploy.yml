@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Install Vite
+        run: bun install vite --save-dev
+
       - name: Build Haunted House project
         working-directory: 11-haunted-house
         run: bun run build
