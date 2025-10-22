@@ -3,7 +3,7 @@ import restart from 'vite-plugin-restart';
 
 export default defineConfig(({ command, mode }) => {
   // 🧩 Allow environment overrides for GitHub Pages builds
-  const outDir = process.env.OUT_DIR || '../dist';
+  const outDir = process.env.OUT_DIR || './dist';
   const base = process.env.BASE || './';
 
   return {
